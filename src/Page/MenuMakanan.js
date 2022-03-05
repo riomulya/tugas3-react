@@ -7,6 +7,7 @@ export default class MenuMakanan extends Component {
     this.state = {
       jml: 0,
       pesan: 1,
+      value: "Masukkan Pesanan Anda",
     };
     this.rubahPesanan = this.rubahPesanan.bind(this);
     this.pesanan = this.pesanan.bind(this);
@@ -64,7 +65,7 @@ export default class MenuMakanan extends Component {
           </tbody>
         </table>
         <br />
-        <input type="text" onChange={this.pesanan} />
+        <input type="text" onChange={this.pesanan} value={this.state.value} />
         <h3>Pesanan Anda : {this.state.jml}</h3>
       </div>
     );
